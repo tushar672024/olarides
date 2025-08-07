@@ -7,7 +7,7 @@ import pytz
 import requests
 
 # Load the model
-model = joblib.load("model/final_model.pkl")
+model = joblib.load("final_model.pkl")
 
 # Define function to get real-time weather data using OpenWeatherMap API
 def get_weather(api_key, city="Delhi"):
@@ -76,3 +76,4 @@ if st.button("Predict Demand"):
 
     prediction = model.predict(features)[0]
     st.success(f"🔮 Predicted Bike Demand: **{int(prediction)} rides**")
+
